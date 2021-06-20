@@ -1,0 +1,92 @@
+.header {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.content {
+    margin: 50px 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.spec-sheet {
+    width: 50%;
+    padding: 30px;
+}
+
+.summary-window {
+    align-self: center;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media only screen and (min-width : 320px) and (max-width : 950px) {
+    .content {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .spec-sheet {
+        width: auto;
+    }
+
+    .summary-window {
+        align-self: stretch;
+        margin: 0;
+    }
+}
+
+.component-options__component-option {
+    padding: 20px;
+    margin: 10px 0;
+    justify-content: space-between;
+    display: flex;
+}
+
+.component-options__component-option:hover {
+    border: 1px solid #000000;
+}
+
+.spec-list__spec {
+    padding: 10px 0;
+    border-bottom: 1px solid #e1e1e1;
+}
+
+.summary-window__total {
+    font-weight: 600;
+}
+
+.buy-button {
+    display: block;
+    margin: 30px 0 0 0;
+    background: #acd8ff;
+    border: 1px solid #b0b0b0;
+    padding: 10px;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+.list--no-style {
+    list-style: none;
+    padding: 0;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.component-options__component-option.selected {
+    border: 1px solid #2519c4;
+}
+
+.rounded-grey-border {
+    border: 1px solid #d5d5d5;
+    border-radius: 6px;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

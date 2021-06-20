@@ -1,26 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Summary from "./components/summary/Summary";
+import Specifications from "./components/specifications/Specifications";
+import { useAppData } from "./hooks/useAppData";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [isLoading, hasError, data] = useAppData();
+
+  if (isLoading) {
+    return <p className="flex-center">Loading ...</p>;
+  }
+
+  if (hasError) {
+    return <p className="flex-center">Error</p>;
+  }
+
+  if (data) {
+    return (
+      <>
+        <div className="header">
+          <h1>Laptop customisation tool</h1>
+        </div>
+        <div className="content">
+          <Specifications categories={data.categories} />
+          <Summary />
+        </div>
+        i{" "}
+      </>
+    );
+  }
+
+  return null;
 }
 
 export default App;
