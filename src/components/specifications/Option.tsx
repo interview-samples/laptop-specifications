@@ -29,8 +29,6 @@ const Option: React.FC<OptionPropTypes> = ({
     <li
       onClick={handleClick}
       className={classes}
-      data-price="300"
-      data-cpu-id="1"
     >
       <span className="component-option__name">{option.name}</span>
       <span className="component-option__price">
