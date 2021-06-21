@@ -1,6 +1,7 @@
 import React from "react";
 import CategoriesList from "./CategoriesList";
 import { ComputerPartsCategory } from "../../interfaces/computerParts";
+import Card from "../Card";
 
 interface SpecififcationPropTypes {
   categories: ComputerPartsCategory[];
@@ -8,10 +9,9 @@ interface SpecififcationPropTypes {
 
 const Specification: React.FC<SpecififcationPropTypes> = ({ categories }) => {
   return (
-    <div className="spec-sheet rounded-grey-border">
-      <h2>Customisation Choices</h2>
+    <Card title='Customisation Choices' className='spec-sheet'>      
       <CategoriesList categories={categories} />
-    </div>
+    </Card>
   );
 };
 
