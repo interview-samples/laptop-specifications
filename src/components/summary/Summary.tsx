@@ -1,12 +1,12 @@
+import Card from "../Card";
 import Basket from "./Basket";
 
 const Summary: React.FC = () => {
   return (
-    <div className="summary-window rounded-grey-border">
-      <h2>Summary</h2>
+    <Card title="Summary" className="summary-window">
       <Basket />
       <button className="buy-button clickable">Buy now</button>
-    </div>
+    </Card>
   );
 };
 
