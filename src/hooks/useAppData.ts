@@ -7,7 +7,6 @@ import usePromiseHook from "./usePromiseHook";
 
 export function useAppData(): [boolean, boolean, ComputerPartsData | null] {
   const { initialise } = useBasketContext();
-
   const { optionsDataSvc } = useDepsContext();
   const promiseRef = useRef(optionsDataSvc.loadData());
   const [isLoading, hasError, data] = usePromiseHook<ComputerPartsData>(

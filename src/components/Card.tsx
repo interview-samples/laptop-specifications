@@ -1,7 +1,7 @@
 
 interface CardProps {
     title: string,
-    className: string
+    className?: string
 }
 
 const Card: React.FC<CardProps> = ({children, title, className=""}) => {
